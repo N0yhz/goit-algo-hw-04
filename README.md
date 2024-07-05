@@ -36,4 +36,4 @@ result = total_salary(file_path)
 if isinstance(result, tuple):
     print(f'Total salary: {result[0]}. Avarage salary: {result[1]}')
 else:
-    print(result) ```
+    print(result) 
