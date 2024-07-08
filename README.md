@@ -1,7 +1,7 @@
 # goit-algo-hw-04
 ДЗ Модуль 4
 
-1. Total/average salary
+**1. Total/average salary**
 
 ``` 
   data = ['Alex Korp,3000 ',
@@ -39,7 +39,7 @@ else:
     print(result)
 ```
 
-2. Cats (id, name, age)
+**2. Cats (id, name, age)**
 
 ```
 data = ['60b90c1c13067a15887e1ae1,Tayson,3',
@@ -79,9 +79,9 @@ cats_info = get_cats_info(file_path)
 print(cats_info)
 ```
 
-4. Assistant bot
+**4. Assistant bot**
 
-Main.py
+*Main.py*
 ```
 def handle_command(command,args):
     contacts = {}
@@ -108,7 +108,7 @@ def handle_command(command,args):
             return 'Unknown command.'
 ```
 
-Pase.py
+*Pase.py*
 
 ```
 def parse_input(user_input):
@@ -117,7 +117,7 @@ def parse_input(user_input):
     return cmd, *args
 ```
 
-Actions.py
+*Actions.py*
 
 ```
 from parse import parse_input
