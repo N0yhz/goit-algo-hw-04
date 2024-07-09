@@ -1,7 +1,7 @@
 # goit-algo-hw-04
 ДЗ Модуль 4
 
-1. Total/average salary
+**1. Total/average salary**
 
 ``` 
   data = ['Alex Korp,3000 ',
@@ -39,7 +39,7 @@ else:
     print(result)
 ```
 
-2. Cats (id, name, age)
+**2. Cats (id, name, age)**
 
 ```
 data = ['60b90c1c13067a15887e1ae1,Tayson,3',
@@ -79,36 +79,22 @@ cats_info = get_cats_info(file_path)
 print(cats_info)
 ```
 
-4. Assistant bot
+**4. Assistant bot**
 
-Main.py
+*Main.py*
 ```
-def handle_command(command,args):
-    contacts = {}
+from parse import parse_input
+from actions import handle_command
 
-    while True:
+if __name__ == '__main__':            
+        print('welcome to the assistant bot!')
         user_input = input('Enter a command: ')
         command, *args = parse_input(user_input)
-
-        if command in {'close', 'exit'}:
-            print('Bye')
-            break
-        elif command == 'hello':
-            print('How can I help you ?')
-
-        elif command == 'add':
-            print( add_contacts(args,contacts))
-        
-        elif command == 'change':
-            print (change_contacts(args,contacts))
-        
-        elif command == 'phone':
-            print(show_phone(args, contacts) )
-        else:
-            return 'Unknown command.'
+        result = handle_command(command,args)
+        print(result)
 ```
 
-Pase.py
+*Pase.py*
 
 ```
 def parse_input(user_input):
@@ -117,7 +103,7 @@ def parse_input(user_input):
     return cmd, *args
 ```
 
-Actions.py
+*Actions.py*
 
 ```
 from parse import parse_input
